@@ -5,7 +5,7 @@ agent any
         jdk 'java'
     } 
 stages{
-    stage('git clone){
+    stage('git clone'){
        steps {
         echo "git clone"
        git "https://github.com/rangareddy7/devops111.git"
