@@ -10,9 +10,9 @@ stages {
         echo 'git clone'
         git 'https://github.com/rangareddy7/test.git'
         }
+    } 
     stage("mavenbuild") {
-         step {      }  
-
+         step {      
              echo 'maven build'
              sh 'mvn clean'
              sh 'mvn compile'
