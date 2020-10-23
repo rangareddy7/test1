@@ -16,6 +16,9 @@ pipeline {
             steps {
                 echo 'code building'
                 sh 'mvn clean'
+                sh 'mvn compile'
+                sh 'mvn test'
+                sh 'mvn pacakge'
                 sh 'mvn install'
             }
         }
