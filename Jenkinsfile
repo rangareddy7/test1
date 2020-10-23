@@ -8,7 +8,7 @@ stages {
     stage('git clone') {
        steps {
         echo "git clone"
-       git 'https://github.com/rangareddy7/test.git'
+       git 'https://github.com/rangareddy7/devop111.git'
         }
       }  
     stage('maven build') {
