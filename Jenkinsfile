@@ -5,15 +5,15 @@ agent any
             jdk 'java'
         } 
 stages {
-    stage('git clone') {
+    stage("gitclone") {
        steps {
-        echo "git clone"
-       git 'https://github.com/rangareddy7/devop111.git'
+        echo 'git clone'
+        git 'https://github.com/rangareddy7/test.git'
         }
-      }  
-    stage('maven build') {
-         step {
-             echo "maven build"
+    stage("mavenbuild") {
+         step {      }  
+
+             echo 'maven build'
              sh 'mvn clean'
              sh 'mvn compile'
              sh 'mvn test'
