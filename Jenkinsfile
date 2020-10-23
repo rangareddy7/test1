@@ -1,25 +1,24 @@
 pipeline {
-agent any
+    agent any
     tools {
-            maven 'maven'
-            jdk 'java'
-        } 
-stages {
-    stage( 'gitclone' ) {
-       steps {
-        echo 'git clone'
-        git 'https://github.com/rangareddy7/test.git'
+        maven 'maven'
+        jdk 'java'
+    }
+    stages {
+        stage('git clone') {
+            steps {
+                echo 'git cloning'
+                git 'https://github.com/rangareddy7/test.git'
+            }
         }
-    stage( 'mavenbuild' ) {
-         step {      }  
-
-             echo 'maven build'
-             sh 'mvn clean'
-             sh 'mvn compile'
-             sh 'mvn test'
-             sh 'mvn package'
-             sh 'mvn install'
-           }
-        }   
-   }
+        
+         stage('build') {
+            steps {
+                echo 'code building'
+                sh 'mvn clean'
+                sh 'mvn test'
+                sh 'mvn install'
+            }
+        }
+    }
 }
