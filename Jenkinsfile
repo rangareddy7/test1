@@ -4,6 +4,7 @@ agent any
             maven 'maven'
             jdk 'java'
         } 
+    
 stages {
     stage("gitclone") {
        steps {
@@ -11,6 +12,7 @@ stages {
         git 'https://github.com/rangareddy7/test.git'
         }
     } 
+    
     stage("mavenbuild") {
          step {      
              echo 'maven build'
