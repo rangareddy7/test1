@@ -17,6 +17,7 @@ stages {
          step {      
              echo 'maven build'
              sh 'mvn clean'
+             sh 'mvn test'
              sh 'mvn install'
            }
         }   
