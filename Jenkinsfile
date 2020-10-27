@@ -18,5 +18,12 @@ pipeline {
                 sh 'mvn package'
             }
         }
+        stage('deploying') {
+            steps {
+              withMaven(jdk: 'java', maven: 'maven') {
+           // some block
+               }
+            }
+        }
     }
 }
