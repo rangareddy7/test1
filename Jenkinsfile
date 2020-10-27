@@ -13,7 +13,7 @@ pipeline {
      }
 
      
-    stages {
+ stages {
         stage('git clone') {
             steps {
                 echo 'git cloning'
@@ -21,7 +21,6 @@ pipeline {
             }
         }
 
-stages{
         stage('Build'){
             steps {
                 sh 'mvn clean package'
@@ -48,6 +47,6 @@ stages{
                     }
                 }
             }
-        }
+        
     }
 }
