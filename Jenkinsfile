@@ -12,7 +12,7 @@ stages {
         }
       }  
 
-      stage("build") {
+      stage('maven') {
          step{
              echo "maven build"
              sh 'mvn clean'
