@@ -17,7 +17,7 @@ pipeline {
         stage('git clone') {
             steps {
                 echo 'git cloning'
-                git 'https://github.com/rangareddy7/test.git'
+                git 'https://github.com/rangareddy7/test1.git'
             }
         }
 
