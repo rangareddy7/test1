@@ -11,7 +11,6 @@ stages {
          git 'https://github.com/rangareddy7/test1.git'
         }
       }  
-
       stage('maven') {
          step{
              echo "maven build"
