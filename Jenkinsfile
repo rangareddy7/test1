@@ -11,7 +11,8 @@ stages {
          git 'https://github.com/rangareddy7/test1.git'
         }
       }  
-      stage('build') {
+
+      stage("build") {
          step{
              echo "maven build"
              sh 'mvn clean'
